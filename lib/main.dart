@@ -24,29 +24,22 @@ class MyApp extends StatelessWidget {
           children: [
             Text('Sign In',
               textAlign: TextAlign.center, style: TextStyle(
-                  fontSize: 30, color: Colors.green, fontWeight: FontWeight.w700
+                  fontSize: 40, color: Colors.yellow, fontWeight: FontWeight.w700
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 20),
+              padding: EdgeInsets.all(20),
               child: Form(
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      padding: EdgeInsets.all(20),
                       child: TextFormField(
-                        keyboardType: TextInputType.text,
-                        decoration: InputDecoration(hintText: 'First Name',
+
+                        decoration: InputDecoration(labelText : 'First Name',
                           border: OutlineInputBorder(),
                         ),
-                        onChanged: (String value) {
 
-                        },
-                        validator: (value) {
-                          return value!.isEmpty
-                              ? 'Please Enter First Name.'
-                              : null;
-                        },
                       ),
                     ),
                   ],
@@ -72,71 +65,27 @@ class MyApp extends StatelessWidget {
             //   ),
             // ),
 
-            Padding(padding: EdgeInsets.symmetric(vertical: 20,horizontal: 20),
+            Padding(padding: EdgeInsets.all(20),
               child: TextFormField(
-                keyboardType: TextInputType.text,
-                decoration: InputDecoration(hintText: 'Last Name',
+
+                decoration: InputDecoration(labelText: 'Last Name',
                   border: OutlineInputBorder(),
                 ),
-                onChanged: (String value) {
 
-                },
-                validator: (value) {
-                  return value!.isEmpty
-                      ? 'Please Enter Last Name.'
-                      : null;
-                },
               ),
             ),
 
-            Padding(padding: EdgeInsets.symmetric(vertical: 20,horizontal: 20),
+
+
+
+
+            Padding(padding: EdgeInsets.all(20),
               child: TextFormField(
-                keyboardType: TextInputType.text,
-                decoration: InputDecoration(hintText: 'D.O.B',
+
+                decoration: InputDecoration(labelText: 'Password',
                   border: OutlineInputBorder(),
                 ),
-                onChanged: (String value) {
 
-                },
-                validator: (value) {
-                  return value!.isEmpty
-                      ? 'Please Enter Date Of Birth.'
-                      : null;
-                },
-              ),
-            ),
-
-            Padding(padding: EdgeInsets.symmetric(vertical: 20,horizontal: 20),
-              child: TextFormField(
-                keyboardType: TextInputType.text,
-                decoration: InputDecoration(hintText: 'Gender',
-                  border: OutlineInputBorder(),
-                ),
-                onChanged: (String value) {
-
-                },
-                validator: (value) {
-                  return value!.isEmpty
-                      ? 'Please Enter Your Gender.'
-                      : null;
-                },
-              ),
-            ),
-
-            Padding(padding: EdgeInsets.symmetric(vertical: 20,horizontal: 20),
-              child: TextFormField(
-                keyboardType: TextInputType.visiblePassword,
-                decoration: InputDecoration(hintText: 'Password',
-                  border: OutlineInputBorder(),
-                ),
-                onChanged: (String value) {
-
-                },
-                validator: (value) {
-                  return value!.isEmpty
-                      ? 'Please Enter Your Password.'
-                      : null;
-                },
               ),
             ),
             //
@@ -159,12 +108,12 @@ class MyApp extends StatelessWidget {
 
             SizedBox(height: 10,),
 
-            Padding(padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+            Padding(padding: EdgeInsets.all(20),
               child: ElevatedButton(
                 onPressed: () {
-                  if (formKey.currentState!.validate()) {
 
-                  }
+
+
                 },
                 child: Text('SignIn', style: TextStyle(fontSize: 20,
                     fontWeight: FontWeight.w600,
